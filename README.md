@@ -1,6 +1,6 @@
 # LuminaLane AI: Lane Detection Engine
 
-![Example Detection](assets/demo_result.png)
+![LuminaLane AI Banner](file:///home/necdet/.gemini/antigravity/brain/95111b3c-dfdf-4837-a014-7b14eada880a/luminalane_ai_banner_1776984701200.png)
 
 ---
 
@@ -16,11 +16,11 @@
 This project implements an efficient lane detection pipeline using the **Ultra-Fast-Lane-Detection (UFLD)** architecture combined with a custom stabilization layer.
 
 ### ⚙️ How it Works
-1.  **Row-based Classification:** Instead of pixel-wise segmentation, the model treats lane detection as a row-selection problem. It predicts the most likely column for each predefined horizontal row anchor. This drastically reduces computational cost.
-2.  **Temporal Smoothing (Custom):** To prevent flickering (especially with dashed lines), we implemented a `LaneSmoothing` engine.
-    - **Exponential Moving Average (EMA):** Filters out sharp noise between frames.
-    - **2nd Degree Polynomial Fitting:** Connects the predicted points with a smooth curve for better visualization and path estimation.
-3.  **GUI Integration:** A desktop interface built with `CustomTkinter` manages multi-threaded processing, allowing high-resolution video inference without UI lag.
+1.  **Row-based Classification:** Unlike pixel-wise segmentation, the model treats lane detection as a row-selection problem. It predicts the most likely "cell" (column) for each horizontal row anchor. This reduces computational cost significantly.
+2.  **Temporal Smoothing:** A custom `LaneSmoothing` engine is used to maintain consistency between frames.
+    - **EMA Filter:** Smooths noise between frames.
+    - **Polynomial Fitting:** Connects predicted points with a 2nd-degree parabolic curve to handle dashed lines and stability.
+3.  **GUI:** A `CustomTkinter` desktop interface manages inference in a separate thread to keep the application responsive.
 
 ### 🚀 Setup
 ```bash
@@ -28,6 +28,10 @@ chmod +x setup_project.sh launch_app.sh
 ./setup_project.sh
 ./launch_app.sh
 ```
+
+### 🎓 Academic Context & Disclaimer
+- **Context:** This project was developed as a **course assignment** for a Computer Vision class.
+- **Disclaimer:** This is an educational demonstration and is NOT intended for large-scale or commercial automotive use.
 
 ---
 
@@ -37,11 +41,11 @@ chmod +x setup_project.sh launch_app.sh
 Bu proje, **Ultra-Fast-Lane-Detection (UFLD)** mimarisini temel alan ve üzerine eklenmiş özel bir stabilizasyon katmanı içeren verimli bir şerit algılama sistemidir.
 
 ### ⚙️ Nasıl Çalışır?
-1.  **Satır Bazlı Sınıflandırma:** Model, şeritleri tüm pikselleri tarayarak (segmentasyon) değil, önceden tanımlanmış yatay satırlarda (row anchors) şeridin en güçlü olduğu "hücreyi" seçerek bulur. Bu, işlem maliyetini inanılmaz ölçüde düşürür.
-2.  **Zamansal Yumuşatma (Özel Geliştirme):** Özellikle kesikli çizgilerde oluşan titremeleri engellemek için `LaneSmoothing` motoru geliştirilmiştir.
-    - **EMA Filtresi:** Kareler arasındaki ani gürültüleri eler.
-    - **2. Derece Polinom Uyumu:** Tespit edilen noktaları pürüzsüz bir parabolik eğri ile birleştirerek yol tahminini netleştirir.
-3.  **GUI Entegrasyonu:** `CustomTkinter` ile hazırlanan masaüstü arayüzü, yapay zeka işlemlerini arka planda (multi-thread) yöneterek yüksek çözünürlüklü videolarda donma yapmadan çalışır.
+1.  **Satır Bazlı Sınıflandırma:** Model, yolu piksellerle taramak yerine, belirli yatay satırlarda (row anchors) şeridin en olası olduğu sütunu seçerek ilerler. Bu sayede işlem yükü azalır ve aşırı hızlı çalışır.
+2.  **Zamansal Yumuşatma:** Kareler arasındaki titremeleri önlemek için özel bir `LaneSmoothing` motoru kullanılmıştır.
+    - **EMA Filtresi:** Kareler arasındaki gani gürültüleri temizler.
+    - **Polinom Uyumu:** Tespit edilen noktaları 2. dereceden bir eğri (parabol) ile birleştirerek süreklilik sağlar.
+3.  **GUI:** `CustomTkinter` ile hazırlanan masaüstü arayüzü, yapay zeka işlemlerini ayrı bir iş parçacığında yöneterek donma yapmadan çalışır.
 
 ### 🚀 Kurulum
 ```bash
@@ -49,3 +53,12 @@ chmod +x setup_project.sh launch_app.sh
 ./setup_project.sh
 ./launch_app.sh
 ```
+
+### 🎓 Akademik Bağlam ve Feragatname
+- **Bağlam:** Bu proje, bir Bilgisayarlı Görü (Computer Vision) **ders ödevi** kapsamında geliştirilmiştir.
+- **Feragatname:** Bu bir eğitim prototipidir; geniş ölçekli veya ticari otomotiv kullanımı için tasarlanmamıştır.
+
+---
+
+### 🖼️ Result Preview / Örnek Çıktı
+![Example Detection](assets/demo_result.png)
