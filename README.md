@@ -19,17 +19,25 @@ To handle the "flicker" and noise inherent in real-world videos, we implemented 
 - **Polynomial Fitting:** Generates a consistent 2nd-degree curve for better visualization.
 - **Temporal EMA:** Maintains smooth transitions between frames.
 
-## 🚀 Installation & Running
+## 🚀 Installation for New Users
 
-### Prerequisites
-- Python 3.10+
-- NVIDIA GPU with CUDA support (Recommended)
+To use LuminaLane AI on a new computer:
 
-### Quick Start
-1.  **Clone the project:** Ensure all files are in `Ultra-Fast-Lane-Detection/`.
-2.  **Launch the App:** 
-    - Double-click **`LuminaLaneAI.desktop`** on your desktop.
-    - *Or run:* `./launch_app.sh`
+1.  **Clone with Git LFS:**
+    ```bash
+    git clone https://github.com/NecdetOzdemir/LuminaLane-AI.git
+    cd LuminaLane-AI
+    ```
+2.  **Run the Setup Script:**
+    This will create the virtual environment and install all dependencies.
+    ```bash
+    chmod +x setup_project.sh launch_app.sh
+    ./setup_project.sh
+    ```
+3.  **Start the App:**
+    ```bash
+    ./launch_app.sh
+    ```
 
 ## 📁 Project Structure
 - `gui_app.py`: Desktop application interface and threading logic.
