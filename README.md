@@ -1,6 +1,5 @@
 # LuminaLane AI: Lane Detection Engine
 
-![LuminaLane AI Banner](file:///home/necdet/.gemini/antigravity/brain/95111b3c-dfdf-4837-a014-7b14eada880a/luminalane_ai_banner_1776984701200.png)
 
 ---
 
@@ -31,7 +30,6 @@ chmod +x setup_project.sh launch_app.sh
 
 ### 🎓 Academic Context & Disclaimer
 - **Context:** This project was developed as a **course assignment** for a Computer Vision class.
-- **Disclaimer:** This is an educational demonstration and is NOT intended for large-scale or commercial automotive use.
 
 ---
 
@@ -56,7 +54,6 @@ chmod +x setup_project.sh launch_app.sh
 
 ### 🎓 Akademik Bağlam ve Feragatname
 - **Bağlam:** Bu proje, bir Bilgisayarlı Görü (Computer Vision) **ders ödevi** kapsamında geliştirilmiştir.
-- **Feragatname:** Bu bir eğitim prototipidir; geniş ölçekli veya ticari otomotiv kullanımı için tasarlanmamıştır.
 
 ---
 
