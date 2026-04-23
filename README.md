@@ -1,52 +1,66 @@
-# LuminaLane AI: Ultra-Fast & Stable Lane Detection 🛣️🚀
+# LuminaLane AI - Intelligent Lane Detection Solutions 🛣️🚀
 
-LuminaLane AI is a premium desktop application for real-time lane detection in videos. It leverages state-of-the-art Deep Learning models and advanced temporal smoothing to provide rock-solid performance on diverse road conditions.
-
-## ✨ Key Features
-- **Ultra-Fast Performance:** Uses the "Row-based Classification" architecture, capable of 300+ FPS.
-- **Premium GUI:** Modern, dark-themed interface built with `CustomTkinter`.
-- **Advanced Stability:** Custom-built `LaneSmoothing` engine using Polynomial Fitting and EMA filters.
-- **Auto-Play Integration:** Automatically opens processed videos in your system's default player.
-- **Easy Deployment:** Native Linux desktop shortcut for one-click access.
-
-## 🛠️ Technical Architecture
-### 1. The Core AI (UFLD)
-The project is built on the **Ultra-Fast-Lane-Detection (UFLD)** framework. Unlike traditional pixel-wise segmentation, UFLD treats lane detection as a row-selection problem, making it significantly more efficient for high-speed driving scenarios.
-
-### 2. Stabilization Layer
-To handle the "flicker" and noise inherent in real-world videos, we implemented a custom **Smoothing Engine**:
-- **Point-based Outlier Rejection:** Discards aberrant detections.
-- **Polynomial Fitting:** Generates a consistent 2nd-degree curve for better visualization.
-- **Temporal EMA:** Maintains smooth transitions between frames.
-
-## 🚀 Installation for New Users
-
-To use LuminaLane AI on a new computer:
-
-1.  **Clone with Git LFS:**
-    ```bash
-    git clone https://github.com/NecdetOzdemir/LuminaLane-AI.git
-    cd LuminaLane-AI
-    ```
-2.  **Run the Setup Script:**
-    This will create the virtual environment and install all dependencies.
-    ```bash
-    chmod +x setup_project.sh launch_app.sh
-    ./setup_project.sh
-    ```
-3.  **Start the App:**
-    ```bash
-    ./launch_app.sh
-    ```
-
-## 📁 Project Structure
-- `gui_app.py`: Desktop application interface and threading logic.
-- `video_process.py`: AI inference engine and smoothing algorithms.
-- `weights/`: Pre-trained ResNet weights for lane detection.
-- `venv/`: Pre-configured virtual environment with all dependencies.
-
-## 🎓 Academic Credit
-This project was developed/enhanced for a **Computer Vision** course to demonstrate the integration of modern deep learning architectures with practical software engineering and UI design.
+![LuminaLane AI Banner](file:///home/necdet/.gemini/antigravity/brain/95111b3c-dfdf-4837-a014-7b14eada880a/luminalane_ai_banner_1776984701200.png)
 
 ---
-*Developed with precision for high-performance lane detection.*
+
+## 🌐 Language Options / Dil Seçenekleri
+- [English (#english)]
+- [Türkçe (#türkçe)]
+
+---
+
+<a name="english"></a>
+# [EN] English Documentation
+
+LuminaLane AI is a premium desktop application for ultra-fast and stable lane detection. It uses Deep Learning to identify road lanes and provides a smooth, flicker-free visualization.
+
+### ✨ Features
+- **Ultra-Fast (300+ FPS):** Uses Row-based Classification architecture for maximum efficiency.
+- **Stable Visualization:** Custom Polynomial Fitting and EMA filters for smooth tracking.
+- **Modern GUI:** Stylish dark-mode interface built with `CustomTkinter`.
+- **Plug & Play:** Easy setup with Git LFS and automatic installer script.
+
+### 🛠️ Technical Architecture
+1. **Model:** ResNet-based UFLD (Ultra-Fast-Lane-Detection) network.
+2. **Post-Processing:** Temporal smoothing logic to maintain consistency even with dashed lines or noise.
+3. **Threading:** Background AI processing to keep the GUI responsive.
+
+### 🚀 Quick Start
+```bash
+git clone https://github.com/NecdetOzdemir/LuminaLane-AI.git
+cd LuminaLane-AI
+chmod +x setup_project.sh launch_app.sh
+./setup_project.sh
+./launch_app.sh
+```
+
+---
+
+<a name="türkçe"></a>
+# [TR] Türkçe Dokümantasyon
+
+LuminaLane AI, ultra hızlı ve kararlı şerit algılama için tasarlanmış yüksek segment bir masaüstü uygulamasıdır. Derin öğrenme teknolojisini kullanarak yolu analiz eder ve titremesiz, akıcı bir görselleştirme sunar.
+
+### ✨ Özellikler
+- **Ultra Hızlı (300+ FPS):** Maksimum verimlilik için "Satır Bazlı Sınıflandırma" (Row-based Classification) mimarisini kullanır.
+- **Kararlı Görselleştirme:** Pürüzsüz takip için özel tasarlanmış Polinom Uyumu ve EMA filtreleri.
+- **Modern GUI:** `CustomTkinter` ile hazırlanmış, şık koyu tema arayüzü.
+- **Hemen Çalıştır:** Git LFS ve otomatik kurulum betiği ile saniyeler içinde hazır.
+
+### 🛠️ Teknik Mimari
+1. **Model:** ResNet tabanlı UFLD (Ultra-Fast-Lane-Detection) ağı.
+2. **Sonsal İşleme (Post-Processing):** Kesikli çizgilerde veya gürültülü anlarda bile sürekliliği koruyan zamansal yumuşatma mantığı.
+3. **Multi-Threading:** Arayüzün donmaması için arka planda çalışan yapay zeka işleme motoru.
+
+### 🚀 Hızlı Başlangıç
+```bash
+git clone https://github.com/NecdetOzdemir/LuminaLane-AI.git
+cd LuminaLane-AI
+chmod +x setup_project.sh launch_app.sh
+./setup_project.sh
+./launch_app.sh
+```
+
+---
+*Created with ❤️ for High-Performance Computer Vision.*
