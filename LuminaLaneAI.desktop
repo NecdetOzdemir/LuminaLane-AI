@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=LuminaLane AI
+Exec=/bin/bash -c "cd /home/necdet/Ultra-Fast-Lane-Detection && source venv/bin/activate && python gui_app.py"
+Icon=video-display
+Comment=LuminaLane AI Lane Detection Engine
+Terminal=false
+Categories=Science;ArtificialIntelligence;Video;
+Path=/home/necdet/Ultra-Fast-Lane-Detection
+StartupNotify=true
